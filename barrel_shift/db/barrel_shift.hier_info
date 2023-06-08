@@ -1,0 +1,1605 @@
+|TopLevel
+state_out[0] <= DUT:dut_instance.output_vector[7]
+state_out[1] <= v_jtag:u0.virtual_jtag_virtual_state_udr
+state_out[2] <= v_jtag:u0.virtual_jtag_virtual_state_sdr
+state_out[3] <= v_jtag:u0.virtual_jtag_virtual_state_cdr
+state_out[4] <= v_jtag:u0.virtual_jtag_jtag_state_e1dr
+
+
+|TopLevel|v_jtag:u0
+tck_clk <= sld_virtual_jtag:virtual_jtag_0.tck
+virtual_jtag_tdi <= sld_virtual_jtag:virtual_jtag_0.tdi
+virtual_jtag_tdo => sld_virtual_jtag:virtual_jtag_0.tdo
+virtual_jtag_ir_in[0] <= sld_virtual_jtag:virtual_jtag_0.ir_in[0]
+virtual_jtag_ir_out[0] => sld_virtual_jtag:virtual_jtag_0.ir_out[0]
+virtual_jtag_virtual_state_cdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_cdr
+virtual_jtag_virtual_state_sdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_sdr
+virtual_jtag_virtual_state_e1dr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_e1dr
+virtual_jtag_virtual_state_pdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_pdr
+virtual_jtag_virtual_state_e2dr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_e2dr
+virtual_jtag_virtual_state_udr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_udr
+virtual_jtag_virtual_state_cir <= sld_virtual_jtag:virtual_jtag_0.virtual_state_cir
+virtual_jtag_virtual_state_uir <= sld_virtual_jtag:virtual_jtag_0.virtual_state_uir
+virtual_jtag_tms <= sld_virtual_jtag:virtual_jtag_0.tms
+virtual_jtag_jtag_state_tlr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_tlr
+virtual_jtag_jtag_state_rti <= sld_virtual_jtag:virtual_jtag_0.jtag_state_rti
+virtual_jtag_jtag_state_sdrs <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sdrs
+virtual_jtag_jtag_state_cdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_cdr
+virtual_jtag_jtag_state_sdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sdr
+virtual_jtag_jtag_state_e1dr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e1dr
+virtual_jtag_jtag_state_pdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_pdr
+virtual_jtag_jtag_state_e2dr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e2dr
+virtual_jtag_jtag_state_udr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_udr
+virtual_jtag_jtag_state_sirs <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sirs
+virtual_jtag_jtag_state_cir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_cir
+virtual_jtag_jtag_state_sir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sir
+virtual_jtag_jtag_state_e1ir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e1ir
+virtual_jtag_jtag_state_pir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_pir
+virtual_jtag_jtag_state_e2ir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e2ir
+virtual_jtag_jtag_state_uir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0
+tck <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tck
+tdi <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tdi
+ir_in[0] <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.ir_in
+tdo => tdo.IN1
+ir_out[0] => ir_out[0].IN1
+virtual_state_cdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_cdr
+virtual_state_sdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_sdr
+virtual_state_e1dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_e1dr
+virtual_state_pdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_pdr
+virtual_state_e2dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_e2dr
+virtual_state_udr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_udr
+virtual_state_cir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_cir
+virtual_state_uir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_uir
+tms <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tms
+jtag_state_tlr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_tlr
+jtag_state_rti <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_rti
+jtag_state_sdrs <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sdrs
+jtag_state_cdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_cdr
+jtag_state_sdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sdr
+jtag_state_e1dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e1dr
+jtag_state_pdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_pdr
+jtag_state_e2dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e2dr
+jtag_state_udr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_udr
+jtag_state_sirs <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sirs
+jtag_state_cir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_cir
+jtag_state_sir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sir
+jtag_state_e1ir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e1ir
+jtag_state_pir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_pir
+jtag_state_e2ir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e2ir
+jtag_state_uir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst
+tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
+tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
+ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
+tdo => tdo.IN1
+ir_out[0] => ir_out[0].IN1
+virtual_state_cdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_cdr
+virtual_state_sdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_sdr
+virtual_state_e1dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_e1dr
+virtual_state_pdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_pdr
+virtual_state_e2dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_e2dr
+virtual_state_udr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_udr
+virtual_state_cir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_cir
+virtual_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_uir
+tms <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tms
+jtag_state_tlr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_tlr
+jtag_state_rti <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_rti
+jtag_state_sdrs <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sdrs
+jtag_state_cdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_cdr
+jtag_state_sdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sdr
+jtag_state_e1dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e1dr
+jtag_state_pdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_pdr
+jtag_state_e2dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e2dr
+jtag_state_udr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_udr
+jtag_state_sirs <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sirs
+jtag_state_cir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_cir
+jtag_state_sir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sir
+jtag_state_e1ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e1ir
+jtag_state_pir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_pir
+jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e2ir
+jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+usr_tck <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
+usr_tdi <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tdi
+usr_ir_in[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_ir_in
+usr_tdo => adapted_tdo.IN1
+usr_ir_out[0] => adapted_ir_out[0].IN1
+usr_virtual_state_cdr <= virtual_state_cdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_sdr <= virtual_state_sdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_e1dr <= virtual_state_e1dr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_pdr <= virtual_state_pdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_e2dr <= virtual_state_e2dr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_udr <= virtual_state_udr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_cir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cdr
+usr_virtual_state_uir <= virtual_state_uir.DB_MAX_OUTPUT_PORT_TYPE
+usr_tms <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tms
+usr_jtag_state_tlr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_tlr
+usr_jtag_state_rti <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_rti
+usr_jtag_state_sdrs <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sdrs
+usr_jtag_state_cdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cdr
+usr_jtag_state_sdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sdr
+usr_jtag_state_e1dr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e1dr
+usr_jtag_state_pdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_pdr
+usr_jtag_state_e2dr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e2dr
+usr_jtag_state_udr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_udr
+usr_jtag_state_sirs <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sirs
+usr_jtag_state_cir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cir
+usr_jtag_state_sir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sir
+usr_jtag_state_e1ir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e1ir
+usr_jtag_state_pir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_pir
+usr_jtag_state_e2ir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e2ir
+usr_jtag_state_uir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_uir
+raw_tck => raw_tck.IN1
+raw_tms => raw_tms.IN1
+tdi => tdi.IN1
+jtag_state_tlr => jtag_state_tlr.IN1
+jtag_state_rti => jtag_state_rti.IN1
+jtag_state_sdrs => jtag_state_sdrs.IN1
+jtag_state_cdr => jtag_state_cdr.IN1
+jtag_state_sdr => jtag_state_sdr.IN1
+jtag_state_e1dr => jtag_state_e1dr.IN1
+jtag_state_pdr => jtag_state_pdr.IN1
+jtag_state_e2dr => jtag_state_e2dr.IN1
+jtag_state_udr => jtag_state_udr.IN1
+jtag_state_sirs => jtag_state_sirs.IN1
+jtag_state_cir => jtag_state_cir.IN1
+jtag_state_sir => jtag_state_sir.IN1
+jtag_state_e1ir => jtag_state_e1ir.IN1
+jtag_state_pir => jtag_state_pir.IN1
+jtag_state_e2ir => jtag_state_e2ir.IN1
+jtag_state_uir => jtag_state_uir.IN1
+usr1 => usr1.IN1
+clr => clr.IN1
+ena => ena.IN1
+ir_in[0] => ir_in[0].IN1
+tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
+raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
+raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
+tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
+vir_tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.vir_tdi
+jtag_state_tlr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_tlr
+jtag_state_rti => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_rti
+jtag_state_sdrs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdrs
+jtag_state_cdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cdr
+jtag_state_sdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdr
+jtag_state_e1dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1dr
+jtag_state_pdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pdr
+jtag_state_e2dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2dr
+jtag_state_udr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_udr
+jtag_state_sirs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sirs
+jtag_state_cir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cir
+jtag_state_sir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sir
+jtag_state_e1ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1ir
+jtag_state_pir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pir
+jtag_state_e2ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2ir
+jtag_state_uir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_uir
+usr1 => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.usr1
+clr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.clr
+ena => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ena
+ir_in[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_in[0]
+tdo <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_out[0]
+adapted_tck <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tck
+adapted_tms <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tms
+adapted_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdi
+adapted_vir_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_vir_tdi
+adapted_jtag_state_tlr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_tlr
+adapted_jtag_state_rti <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_rti
+adapted_jtag_state_sdrs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdrs
+adapted_jtag_state_cdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cdr
+adapted_jtag_state_sdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdr
+adapted_jtag_state_e1dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1dr
+adapted_jtag_state_pdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pdr
+adapted_jtag_state_e2dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2dr
+adapted_jtag_state_udr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_udr
+adapted_jtag_state_sirs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sirs
+adapted_jtag_state_cir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cir
+adapted_jtag_state_sir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sir
+adapted_jtag_state_e1ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1ir
+adapted_jtag_state_pir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pir
+adapted_jtag_state_e2ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2ir
+adapted_jtag_state_uir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_uir
+adapted_usr1 <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_usr1
+adapted_clr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_clr
+adapted_ena <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ena
+adapted_ir_in[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_in[0]
+adapted_tdo => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdo
+adapted_ir_out[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[0]
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+raw_tck => adapted_tck.DATAIN
+raw_tms => adapted_tms.DATAIN
+tdi => adapted_tdi.DATAIN
+vir_tdi => adapted_vir_tdi.DATAIN
+jtag_state_tlr => adapted_jtag_state_tlr.DATAIN
+jtag_state_rti => adapted_jtag_state_rti.DATAIN
+jtag_state_sdrs => adapted_jtag_state_sdrs.DATAIN
+jtag_state_cdr => adapted_jtag_state_cdr.DATAIN
+jtag_state_sdr => adapted_jtag_state_sdr.DATAIN
+jtag_state_e1dr => adapted_jtag_state_e1dr.DATAIN
+jtag_state_pdr => adapted_jtag_state_pdr.DATAIN
+jtag_state_e2dr => adapted_jtag_state_e2dr.DATAIN
+jtag_state_udr => adapted_jtag_state_udr.DATAIN
+jtag_state_sirs => adapted_jtag_state_sirs.DATAIN
+jtag_state_cir => adapted_jtag_state_cir.DATAIN
+jtag_state_sir => adapted_jtag_state_sir.DATAIN
+jtag_state_e1ir => adapted_jtag_state_e1ir.DATAIN
+jtag_state_pir => adapted_jtag_state_pir.DATAIN
+jtag_state_e2ir => adapted_jtag_state_e2ir.DATAIN
+jtag_state_uir => adapted_jtag_state_uir.DATAIN
+usr1 => adapted_usr1.DATAIN
+clr => adapted_clr.DATAIN
+ena => adapted_ena.DATAIN
+ir_in[0] => adapted_ir_in[0].DATAIN
+tdo <= adapted_tdo.DB_MAX_OUTPUT_PORT_TYPE
+ir_out[0] <= adapted_ir_out[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tck <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tms <= raw_tms.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdi <= tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_vir_tdi <= vir_tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_tlr <= jtag_state_tlr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_rti <= jtag_state_rti.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdrs <= jtag_state_sdrs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cdr <= jtag_state_cdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdr <= jtag_state_sdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1dr <= jtag_state_e1dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pdr <= jtag_state_pdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2dr <= jtag_state_e2dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_udr <= jtag_state_udr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sirs <= jtag_state_sirs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cir <= jtag_state_cir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sir <= jtag_state_sir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1ir <= jtag_state_e1ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pir <= jtag_state_pir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2ir <= jtag_state_e2ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_uir <= jtag_state_uir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_usr1 <= usr1.DB_MAX_OUTPUT_PORT_TYPE
+adapted_clr <= clr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ena <= ena.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ir_in[0] <= ir_in[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdo => tdo.DATAIN
+adapted_ir_out[0] => ir_out[0].DATAIN
+
+
+|TopLevel|DUT:dut_instance
+input_vector[0] => barrel_shift:add_instance.a[0]
+input_vector[1] => barrel_shift:add_instance.a[1]
+input_vector[2] => barrel_shift:add_instance.a[2]
+input_vector[3] => barrel_shift:add_instance.a[3]
+input_vector[4] => barrel_shift:add_instance.a[4]
+input_vector[5] => barrel_shift:add_instance.a[5]
+input_vector[6] => barrel_shift:add_instance.a[6]
+input_vector[7] => barrel_shift:add_instance.a[7]
+input_vector[8] => barrel_shift:add_instance.b0
+input_vector[9] => barrel_shift:add_instance.b1
+input_vector[10] => barrel_shift:add_instance.b2
+input_vector[11] => barrel_shift:add_instance.left_sig
+output_vector[0] <= barrel_shift:add_instance.y[0]
+output_vector[1] <= barrel_shift:add_instance.y[1]
+output_vector[2] <= barrel_shift:add_instance.y[2]
+output_vector[3] <= barrel_shift:add_instance.y[3]
+output_vector[4] <= barrel_shift:add_instance.y[4]
+output_vector[5] <= barrel_shift:add_instance.y[5]
+output_vector[6] <= barrel_shift:add_instance.y[6]
+output_vector[7] <= barrel_shift:add_instance.y[7]
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance
+a[0] => mux_2to1:M1.I[1]
+a[0] => mux_2to1:M8.I[0]
+a[1] => mux_2to1:M2.I[1]
+a[1] => mux_2to1:M7.I[0]
+a[2] => mux_2to1:M3.I[1]
+a[2] => mux_2to1:M6.I[0]
+a[3] => mux_2to1:M4.I[1]
+a[3] => mux_2to1:M5.I[0]
+a[4] => mux_2to1:M4.I[0]
+a[4] => mux_2to1:M5.I[1]
+a[5] => mux_2to1:M3.I[0]
+a[5] => mux_2to1:M6.I[1]
+a[6] => mux_2to1:M2.I[0]
+a[6] => mux_2to1:M7.I[1]
+a[7] => mux_2to1:M1.I[0]
+a[7] => mux_2to1:M8.I[1]
+b0 => mux_2to1:M25.sel
+b0 => mux_2to1:M26.sel
+b0 => mux_2to1:M27.sel
+b0 => mux_2to1:M28.sel
+b0 => mux_2to1:M29.sel
+b0 => mux_2to1:M30.sel
+b0 => mux_2to1:M31.sel
+b0 => mux_2to1:M32.sel
+b1 => mux_2to1:M17.sel
+b1 => mux_2to1:M18.sel
+b1 => mux_2to1:M19.sel
+b1 => mux_2to1:M20.sel
+b1 => mux_2to1:M21.sel
+b1 => mux_2to1:M22.sel
+b1 => mux_2to1:M23.sel
+b1 => mux_2to1:M24.sel
+b2 => mux_2to1:M9.sel
+b2 => mux_2to1:M10.sel
+b2 => mux_2to1:M11.sel
+b2 => mux_2to1:M12.sel
+b2 => mux_2to1:M13.sel
+b2 => mux_2to1:M14.sel
+b2 => mux_2to1:M15.sel
+b2 => mux_2to1:M16.sel
+left_sig => mux_2to1:M1.sel
+left_sig => mux_2to1:M2.sel
+left_sig => mux_2to1:M3.sel
+left_sig => mux_2to1:M4.sel
+left_sig => mux_2to1:M5.sel
+left_sig => mux_2to1:M6.sel
+left_sig => mux_2to1:M7.sel
+left_sig => mux_2to1:M8.sel
+left_sig => mux_2to1:M33.sel
+left_sig => mux_2to1:M34.sel
+left_sig => mux_2to1:M35.sel
+left_sig => mux_2to1:M36.sel
+left_sig => mux_2to1:M37.sel
+left_sig => mux_2to1:M38.sel
+left_sig => mux_2to1:M39.sel
+left_sig => mux_2to1:M40.sel
+y[0] <= mux_2to1:M40.Y
+y[1] <= mux_2to1:M39.Y
+y[2] <= mux_2to1:M38.Y
+y[3] <= mux_2to1:M37.Y
+y[4] <= mux_2to1:M36.Y
+y[5] <= mux_2to1:M35.Y
+y[6] <= mux_2to1:M34.Y
+y[7] <= mux_2to1:M33.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M1
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M1|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M1|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M1|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M1|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M2
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M2|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M2|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M2|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M2|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M3
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M3|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M3|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M3|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M3|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M4
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M4|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M4|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M4|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M4|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M5
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M5|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M5|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M5|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M5|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M6
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M6|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M6|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M6|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M6|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M7
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M7|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M7|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M7|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M7|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M8
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M8|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M8|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M8|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M8|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M9
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M9|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M9|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M9|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M9|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M10
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M10|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M10|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M10|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M10|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M11
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M11|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M11|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M11|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M11|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M12
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M12|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M12|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M12|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M12|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M13
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M13|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M13|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M13|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M13|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M14
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M14|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M14|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M14|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M14|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M15
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M15|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M15|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M15|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M15|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M16
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M16|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M16|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M16|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M16|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M17
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M17|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M17|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M17|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M17|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M18
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M18|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M18|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M18|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M18|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M19
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M19|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M19|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M19|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M19|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M20
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M20|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M20|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M20|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M20|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M21
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M21|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M21|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M21|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M21|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M22
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M22|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M22|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M22|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M22|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M23
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M23|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M23|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M23|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M23|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M24
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M24|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M24|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M24|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M24|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M25
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M25|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M25|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M25|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M25|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M26
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M26|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M26|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M26|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M26|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M27
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M27|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M27|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M27|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M27|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M28
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M28|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M28|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M28|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M28|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M29
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M29|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M29|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M29|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M29|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M30
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M30|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M30|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M30|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M30|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M31
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M31|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M31|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M31|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M31|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M32
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M32|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M32|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M32|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M32|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M33
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M33|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M33|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M33|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M33|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M34
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M34|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M34|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M34|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M34|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M35
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M35|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M35|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M35|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M35|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M36
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M36|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M36|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M36|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M36|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M37
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M37|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M37|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M37|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M37|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M38
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M38|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M38|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M38|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M38|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M39
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M39|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M39|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M39|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M39|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M40
+I[0] => AND_2:A1.A
+I[1] => AND_2:A2.B
+sel => INVERTER:N1.A
+sel => AND_2:A2.A
+Y <= OR_2:O1.Y
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M40|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M40|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M40|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|barrel_shift:add_instance|mux_2to1:M40|OR_2:O1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
